@@ -1,4 +1,4 @@
-class MSize {
+class Size {
 // sizes for padding and margins
   static const double xs = 4.0;
   static const double sm = 8.0;
@@ -11,6 +11,7 @@ class MSize {
   static const double iconsm = 16.0;
   static const double iconmd = 24.0;
   static const double iconlg = 32.0;
+  static const double iconxlg = 42.0;
 
 //fonts
   static const double fontSizeSm = 32.0;

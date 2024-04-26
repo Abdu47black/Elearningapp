@@ -1,5 +1,6 @@
 import 'package:fidel/features/authentication/controllers/on_boarding_controller/on_boarding_controller.dart';
-import 'package:fidel/features/authentication/view/Login/login.dart';
+import 'package:fidel/features/authentication/view/Login/widgets/login.dart';
+import 'package:fidel/features/authentication/view/SignUp/widgets/signup.dart';
 import 'package:fidel/features/authentication/view/onboarding/widgets/onboarding_pageview.dart';
 import 'package:fidel/features/authentication/view/onboarding/widgets/pageindicator.dart';
 import 'package:fidel/features/authentication/view/onboarding/widgets/skipbtn.dart';
@@ -64,7 +65,7 @@ class LastonBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(MSize.defaultSpace),
+      padding: const EdgeInsets.all(Size.defaultSpace),
       child: Column(children: [
         Image.asset(
             width: Mhelper.screenWidth() * 0.8,
@@ -76,7 +77,7 @@ class LastonBoardingScreen extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(
-          height: MSize.spaceBtwItems,
+          height: Size.spaceBtwItems,
         ),
         Text(
           subtitle,
@@ -84,7 +85,7 @@ class LastonBoardingScreen extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(
-          height: MSize.buttonHeight,
+          height: Size.buttonHeight,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -92,9 +93,10 @@ class LastonBoardingScreen extends StatelessWidget {
             SizedBox(
                 width: 150.0,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text(MTexts.signUp))),
+                    onPressed: () => Get.offAll(const SignUpScreen()),
+                    child: const Text(MTexts.signUp))),
             const SizedBox(
-              width: MSize.spaceBtwItems,
+              width: Size.spaceBtwItems,
             ),
             SizedBox(
                 width: 150.0,

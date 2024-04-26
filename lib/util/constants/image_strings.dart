@@ -1,6 +1,6 @@
 class MImages {
   //App logos
-  static const String darkAppLogo = '';
+  static const String verifiedicon = 'assets/icons/bluetick.png';
   static const String lightAppLogo = '';
 
   //Social logos

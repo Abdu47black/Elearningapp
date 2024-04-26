@@ -14,7 +14,7 @@ class OnBorardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(MSize.defaultSpace),
+      padding: const EdgeInsets.all(Size.defaultSpace),
       child: Column(children: [
         Image.asset(
             width: Mhelper.screenWidth() * 0.8,
@@ -26,7 +26,7 @@ class OnBorardingPage extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(
-          height: MSize.spaceBtwItems,
+          height: Size.spaceBtwItems,
         ),
         Text(
           subtitle,

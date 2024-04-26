@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
       theme: MAppTheme.lightheme,
       darkTheme: MAppTheme.darktheme,
       home: const OnboardingScreen(),

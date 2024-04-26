@@ -8,6 +8,7 @@ class Mcolors {
   static const secondaryColor = Color(0XFFFFE7EE);
   static const accent = Color(0XFFBAD6FF);
   static const tertiary = Color(0XFFF6905F);
+  static const grey = Color(0XFF808080);
 
   //text colors
   static const textprimary = Color(0XFF1F1F39);
