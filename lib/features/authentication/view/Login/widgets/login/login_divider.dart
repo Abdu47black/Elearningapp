@@ -18,7 +18,7 @@ class logindivider extends StatelessWidget {
         height: Size.spaceBtwSections,
       ),
       Divider(
-        color: dark ? Mcolors.dark : Mcolors.accent,
+        color: dark ? MColors.dark : MColors.accent,
       )
     ]);
   }

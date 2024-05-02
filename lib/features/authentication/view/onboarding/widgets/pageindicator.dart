@@ -22,7 +22,7 @@ class Pageindicator extends StatelessWidget {
         count: 3,
         onDotClicked: controller.dotNavigationClick,
         effect: ExpandingDotsEffect(
-          activeDotColor: dark ? Colors.blue : Mcolors.dark,
+          activeDotColor: dark ? Colors.blue : MColors.dark,
           dotHeight: 6,
           dotWidth: 10,
         ),

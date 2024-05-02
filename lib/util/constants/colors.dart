@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Mcolors {
-  Mcolors();
+class MColors {
+  MColors();
 
   //app basic  colors
   static const primaryColor = Color(0XFF3D5CFF);
   static const secondaryColor = Color(0XFFFFE7EE);
+  static const darkgrey = Color(0XFF2F2F42);
+  static const darkerPurple = Color(0XFF0E0C32);
+
   static const accent = Color(0XFFBAD6FF);
   static const tertiary = Color(0XFFF6905F);
   static const grey = Color(0XFF808080);
+  static const white = Color(0XFFffffff);
 
   //text colors
   static const textprimary = Color(0XFF1F1F39);
@@ -39,7 +43,6 @@ class Mcolors {
   static const success = Color(0xFF008000);
   static const warning = Color(0xFFffa500);
   static const info = Color(0xFF0000ff);
-
   //border colors
   static const lightborder = Color(0XFFB8B8D2);
   static const border = Color(0XFFB8B8D2);

@@ -1,4 +1,4 @@
-import 'package:fidel/features/authentication/view/SignUp/widgets/SignUp/verify_phone.dart';
+import 'package:fidel/bottom_nav.dart';
 import 'package:fidel/features/authentication/view/SignUp/widgets/signup.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/sizes.dart';
@@ -56,7 +56,7 @@ class LoginForm extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                     onPressed: () {
-                      Get.offAll(const VerifiedPage());
+                      Get.offAll(const BottomNavBar());
                     },
                     child: const Text(MTexts.signIn))),
             const SizedBox(
@@ -83,7 +83,7 @@ class LoginForm extends StatelessWidget {
               children: [
                 const Flexible(
                     child: Divider(
-                  color: Mcolors.primaryColor,
+                  color: MColors.primaryColor,
                   thickness: 0.5,
                   indent: 40.0,
                   endIndent: 5,
@@ -94,7 +94,7 @@ class LoginForm extends StatelessWidget {
                 ),
                 const Flexible(
                     child: Divider(
-                  color: Mcolors.accent,
+                  color: MColors.accent,
                   thickness: 0.5,
                   indent: 40.0,
                   endIndent: 5,

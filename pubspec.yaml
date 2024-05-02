@@ -30,6 +30,8 @@ dependencies:
   url_launcher: ^6.2.5
   flutter_native_splash: ^2.4.0
   smooth_page_indicator: ^1.1.0
+  carousel_slider: ^4.2.1
+  percent_indicator: ^4.2.3
 
 dev_dependencies:
   flutter_test:
@@ -44,10 +46,8 @@ flutter:
   assets:
     - assets/logos/
     - assets/icons/
-    #- assets/images/onboardingImages/illustration(1).png
     - assets/images/onboardingImages/
-
-  # An image asset can refer to one or more resolution-specific "variants", see
+    - assets/images/others/banner/
 
   # example:
   fonts:

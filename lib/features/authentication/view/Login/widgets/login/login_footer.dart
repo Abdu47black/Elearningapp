@@ -16,7 +16,7 @@ class LoginFooter extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-              border: Border.all(color: Mcolors.grey),
+              border: Border.all(color: MColors.grey),
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
             icon: const Image(
@@ -31,7 +31,7 @@ class LoginFooter extends StatelessWidget {
         ),
         Container(
           decoration: BoxDecoration(
-              border: Border.all(color: Mcolors.grey),
+              border: Border.all(color: MColors.grey),
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
             icon: const Image(

@@ -42,6 +42,11 @@ class MTexts {
   static const donthavaccount = 'Don\'t have Account?';
   static const freesignup = 'Enter your details below & free sign up';
   static const agreetoterms =
-      'By creating an account you have to agree with our them & conditions';
+      'By creating an account you have to agree with our term & conditions';
   static const areadayhaveaccount = 'Already have an account？';
+
+  // home texts
+  static const learnedToday = 'Learned today';
+  static const mycourses = 'My Courses';
+  static const learnedmin = "46min /90 min";
 }
