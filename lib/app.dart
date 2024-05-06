@@ -1,4 +1,4 @@
-import 'package:fidel/features/authentication/view/Login/widgets/login.dart';
+import 'package:fidel/features/authentication/view/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:fidel/util/theme/Custom_themes/theme.dart';
 import 'package:get/get.dart';
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: MAppTheme.lightheme,
       themeMode: ThemeMode.dark,
       darkTheme: MAppTheme.darktheme,
-      home: const LoginScreen(),
+      home: const OnboardingScreen(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:fidel/features/authentication/controllers/on_boarding_controller/on_boarding_controller.dart';
-import 'package:fidel/features/authentication/view/Login/widgets/login.dart';
 import 'package:fidel/features/authentication/view/SignUp/widgets/signup.dart';
+import 'package:fidel/features/authentication/view/Signin/widgets/login.dart';
 import 'package:fidel/features/authentication/view/onboarding/widgets/onboarding_pageview.dart';
 import 'package:fidel/features/authentication/view/onboarding/widgets/pageindicator.dart';
 import 'package:fidel/features/authentication/view/onboarding/widgets/skipbtn.dart';

@@ -1,8 +1,9 @@
-import 'package:fidel/features/authentication/view/Login/widgets/login.dart';
-import 'package:fidel/util/constants/text_strings.dart';
-import 'package:fidel/util/constants/sizes.dart';
+import 'package:fidel/features/authentication/view/Signin/widgets/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'package:fidel/util/constants/sizes.dart';
+import 'package:fidel/util/constants/text_strings.dart';
 
 class AgreeToTerms extends StatelessWidget {
   const AgreeToTerms({

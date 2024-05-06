@@ -26,12 +26,15 @@ class SignUpForm extends StatelessWidget {
               height: Size.spaceBtwInputFields,
             ),
             //password
-            TextFormField(
-                decoration: const InputDecoration(
-              labelText: MTexts.password,
-              suffixIcon: Icon(Iconsax.eye_slash),
-              hintText: 'Password',
-            )),
+            SizedBox(
+              width: 100,
+              child: TextFormField(
+                  decoration: const InputDecoration(
+                labelText: MTexts.password,
+                suffixIcon: Icon(Iconsax.eye_slash),
+                hintText: 'Password',
+              )),
+            ),
             const SizedBox(
               height: Size.spaceBtwInputFields / 2,
             ),

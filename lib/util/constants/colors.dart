@@ -8,6 +8,7 @@ class MColors {
   static const secondaryColor = Color(0XFFFFE7EE);
   static const darkgrey = Color(0XFF2F2F42);
   static const darkerPurple = Color(0XFF0E0C32);
+  static const black = Color(0XFF000000);
 
   static const accent = Color(0XFFBAD6FF);
   static const tertiary = Color(0XFFF6905F);
@@ -23,6 +24,7 @@ class MColors {
   static const light = Color(0XFFffffff);
   static const dark = Color(0XFF1F1F39);
   static const primaryBackground = Color(0XFFffffff);
+  static const containerBackground = Color(0XFF2F2F42);
 
   ///background container colors
 

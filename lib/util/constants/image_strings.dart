@@ -15,5 +15,7 @@ class MImages {
       'assets/images/onboardingImages/illustration02.png';
   static const String onBoardingScreenImage3 =
       'assets/images/onboardingImages/illustration03.png';
+
+  static const String cousrseImage = 'assets/carouselSlider/uiux_deco.jpeg';
 }
 ///home/smart/projects/flutter_projects/fidel/assets/images/onboardingImages/illustration 01.png

@@ -1,7 +1,6 @@
-import 'package:fidel/features/Course/Home/widgets/home.dart';
-
-import 'package:fidel/features/Course/caruousel.dart';
-import 'package:fidel/features/authentication/view/SignUp/widgets/SignUp/verified_phone.dart';
+import 'package:fidel/features/Course/views/CourseScreen/courses_screen.dart';
+import 'package:fidel/features/Course/views/homeScreen/home.dart';
+import 'package:fidel/features/authentication/view/SignUp/widgets/OTP/enter_yourphone.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -49,12 +48,12 @@ class BottomNavBar extends StatelessWidget {
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final Rx<int> s = 0.obs;
+
   final screens = [
     const HomeScreen(),
-    const VerifiedPage(),
-    const CarouselHero(),
-    Container(color: Colors.greenAccent),
+    const CourseScreen(),
+    const ConWithPhone(),
     Container(color: Colors.blueAccent),
+    Container(color: Colors.grey),
   ];
 }

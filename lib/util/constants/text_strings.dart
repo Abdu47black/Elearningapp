@@ -31,6 +31,10 @@ class MTexts {
   static const privacypolicy = 'Privacy Policy';
   static const termsofuse = 'Terms of use';
   static const verificationCode = 'Verification code';
+  static const continuewithphone = 'Continue With Phone';
+  static const enteryourphone = 'Enter Your phone Number';
+  static const continuebtn = 'Continue';
+  static const codeissentto = 'Code is Sent to 283 253 8989';
   static const resendEmail = 'Resend Email';
   static const signIn = 'Sign In';
   static const done = 'Done';
@@ -49,4 +53,11 @@ class MTexts {
   static const learnedToday = 'Learned today';
   static const mycourses = 'My Courses';
   static const learnedmin = "46min /90 min";
+  static const sellingPrice = "624";
+  static const regularPrice = "650";
+
+  //verification page
+  static const didntrecievecode = 'Didn\'t Recive Code ?';
+  static const requestagain = 'Request again';
+  static const verifyandcreateaccount = 'Verify and Create Account';
 }
