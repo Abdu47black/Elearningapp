@@ -1,6 +1,8 @@
 import 'package:fidel/features/Course/views/CourseScreen/courses_screen.dart';
+import 'package:fidel/features/Course/views/Search/search_screen.dart';
 import 'package:fidel/features/Course/views/homeScreen/home.dart';
-import 'package:fidel/features/authentication/view/SignUp/widgets/OTP/enter_yourphone.dart';
+import 'package:fidel/features/authentication/view/Password_Configurarion/forgot_password.dart';
+import 'package:fidel/features/authentication/view/Password_Configurarion/reset_password.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -52,8 +54,8 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     const CourseScreen(),
-    const ConWithPhone(),
-    Container(color: Colors.blueAccent),
-    Container(color: Colors.grey),
+    const SearchScreen(),
+    const SearchScreen(),
+    const ForgotPasswordScreen()
   ];
 }

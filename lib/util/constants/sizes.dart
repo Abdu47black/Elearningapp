@@ -14,8 +14,8 @@ class Size {
   static const double iconxlg = 42.0;
 
 //fonts
-  static const double fontSizeSm = 32.0;
-  static const double fontSizeMd = 32.0;
+  static const double fontSizeSm = 16.0;
+  static const double fontSizeMd = 24.0;
   static const double fontSizeLg = 32.0;
 
 //button sizes

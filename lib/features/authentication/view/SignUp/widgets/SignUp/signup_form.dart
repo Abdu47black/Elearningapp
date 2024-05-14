@@ -1,6 +1,8 @@
+import 'package:fidel/features/authentication/view/SignUp/widgets/OTP/enter_yourphone.dart';
 import 'package:fidel/util/constants/sizes.dart';
 import 'package:fidel/util/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SignUpForm extends StatelessWidget {
@@ -27,7 +29,7 @@ class SignUpForm extends StatelessWidget {
             ),
             //password
             SizedBox(
-              width: 100,
+              width: double.infinity,
               child: TextFormField(
                   decoration: const InputDecoration(
                 labelText: MTexts.password,
@@ -45,7 +47,10 @@ class SignUpForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text(MTexts.createAccount))),
+                    onPressed: () {
+                      Get.offAll(const ConWithPhone());
+                    },
+                    child: const Text(MTexts.createAccount))),
             const SizedBox(
               height: 3.0,
             ),

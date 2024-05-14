@@ -1,3 +1,4 @@
+import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/devices/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +28,9 @@ class MAppBar extends StatelessWidget implements PreferredSizeWidget {
           leading: showBackArrow
               ? IconButton(
                   onPressed: () => Get.back(),
-                  icon: const Icon(Iconsax.arrow_left))
+                  icon: const Icon(Iconsax.arrow_left_2),
+                  color: MColors.white,
+                )
               : leadingIcon != null
                   ? IconButton(
                       onPressed: leadingOnPressed, icon: Icon(leadingIcon))

@@ -20,8 +20,8 @@ class LoginFooter extends StatelessWidget {
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
             icon: const Image(
-                width: Size.iconmd,
-                height: Size.iconmd,
+                width: Size.iconlg,
+                height: Size.iconlg,
                 image: AssetImage(MImages.facebook)),
             onPressed: () {},
           ),

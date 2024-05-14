@@ -1,6 +1,7 @@
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class MSearchBar extends StatelessWidget {
   const MSearchBar({
@@ -8,9 +9,11 @@ class MSearchBar extends StatelessWidget {
     this.icon,
     this.showBackground = true,
     this.showBorder = true,
+    required this.mplaceholder,
   });
-  // final String text;
+  final String mplaceholder;
   final IconData? icon;
+
   final bool showBackground, showBorder;
 
   @override
@@ -25,12 +28,13 @@ class MSearchBar extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             color: MColors.containerBackground,
           ),
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.search),
-              SizedBox(width: Size.sm),
-              Text('Find Course',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w200)),
+              const Icon(Iconsax.search_favorite),
+              const SizedBox(width: Size.sm),
+              Text(mplaceholder,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w200)),
             ],
           )),
     );

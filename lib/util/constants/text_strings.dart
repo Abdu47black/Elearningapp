@@ -24,7 +24,10 @@ class MTexts {
   static const newpassword = 'New Password';
   static const phoneno = 'Phone no';
   static const rememberme = 'Remember me';
+  static const resetPasswordemailsent = 'Password Reset Sent';
   static const forgotPassword = 'Forgot Password?';
+  static const forgotPasswordsubtitle =
+      'If you can\'t remember your password, fill in your email below. An email will be sent to you that you can use to reset your password. ';
   static const orSignInWith = 'or SignIn with';
   static const orSignupWith = 'or Signup With';
   static const iagreeto = 'I agree to';
@@ -60,4 +63,9 @@ class MTexts {
   static const didntrecievecode = 'Didn\'t Recive Code ?';
   static const requestagain = 'Request again';
   static const verifyandcreateaccount = 'Verify and Create Account';
+
+  //cousre details
+
+  static const productname = 'Product Design v1.0';
+  static const productprice = '\$71.00';
 }

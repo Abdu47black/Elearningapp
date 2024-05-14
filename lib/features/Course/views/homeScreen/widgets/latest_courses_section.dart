@@ -54,11 +54,10 @@ class LatestCoursesSection extends StatelessWidget {
                             topLeft: Radius.circular(15),
                             topRight: Radius.circular(15),
                           ),
-                          child: FadeInImage.assetNetwork(
-                            placeholder: 'Course Image',
-                            image:
-                                'https://cdn2.iconfinder.com/data/icons/cloud-data-and-network-technology/512/188_Share_sharing_social_media-256.png',
-                            height: 120,
+                          child: Image.asset(
+                            // placeholder: 'Course Image',
+                            // image:
+                            MImages.cousrseImage, height: 120,
                             width: double.infinity,
                             fit: BoxFit.cover,
                           ),

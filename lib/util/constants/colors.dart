@@ -24,12 +24,14 @@ class MColors {
   static const light = Color(0XFFffffff);
   static const dark = Color(0XFF1F1F39);
   static const primaryBackground = Color(0XFFffffff);
-  static const containerBackground = Color(0XFF2F2F42);
 
   ///background container colors
 
+  static const containerBackground = Color(0XFF2F2F42);
   static const lightcontainer = Color(0XFFF0F0F2);
   static const darkcontainer = Color(0XFF1F1F39);
+  static const cremecolor = Color(0XFFFFE7EE);
+  static const greybg = Color(0XFF858597);
 
   ///button colors
   static const btnprimary = Color(0XFF3D5CFF);
@@ -40,7 +42,7 @@ class MColors {
   static const borderprimary = Color(0XFFffffff);
   static const bordersecondary = Color(0XFFffffff);
 
-  //erro and validations colors
+  //error and validations colors
   static const error = Color(0xFFff0000);
   static const success = Color(0xFF008000);
   static const warning = Color(0xFFffa500);

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "541156238984",
+    "project_id": "e-learningmobileapp",
+    "storage_bucket": "e-learningmobileapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541156238984:android:d307873a8580336962613d",
+        "android_client_info": {
+          "package_name": "com.example.fidel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541156238984-bvgr9efrn5oaootts6p7vfaongfdb474.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fidel",
+            "certificate_hash": "92060e9169f73f9214cfecea15ee1e51a14f81ff"
+          }
+        },
+        {
+          "client_id": "541156238984-f76hai8ied2jl2qgl2pbn5c1gq37vthv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyUUG4KpiuN4KS4zMY3MzgEBZyoLXbZPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541156238984-f76hai8ied2jl2qgl2pbn5c1gq37vthv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "541156238984-36vpahc6k3eas5r01e390r8nlea3ph80.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fidel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

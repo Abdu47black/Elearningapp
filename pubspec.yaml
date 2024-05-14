@@ -23,8 +23,6 @@ dependencies:
 
   get: ^4.6.6
   get_storage: ^2.1.1
-  another_flutter_splash_screen: ^1.2.0
-  introduction_screen: ^3.1.12
 
   #utility Packages
   logger: ^2.2.0
@@ -40,6 +38,11 @@ dependencies:
   shared_preferences: ^2.2.3
   lottie: ^3.1.0
   fluttertoast: ^8.2.5
+
+  #fireBase
+  firebase_core: ^2.31.0
+  firebase_auth: ^4.19.5
+  google_sign_in: ^6.2.1
 
 dev_dependencies:
   flutter_test:

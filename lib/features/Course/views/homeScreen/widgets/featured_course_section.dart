@@ -94,7 +94,7 @@ class FeaturedCourseSection extends StatelessWidget {
                                   Row(
                                     children: [
                                       Text(
-                                        'HiLcO',
+                                        'Perbaytes',
                                         style: Theme.of(context)
                                             .textTheme
                                             .headlineMedium!

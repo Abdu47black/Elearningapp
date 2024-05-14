@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find();
@@ -20,6 +21,10 @@ class OnBoardingController extends GetxController {
 
   // skip button
   void skipPage() {
+    if (currentPageIndex.value == 2) {
+      final storage = GetStorage();
+      storage.write("IsFirstTime", false);
+    }
     currentPageIndex.value = 2;
     pageController.jumpToPage(2);
   }

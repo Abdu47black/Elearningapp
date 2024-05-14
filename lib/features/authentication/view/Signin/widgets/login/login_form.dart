@@ -1,4 +1,5 @@
 import 'package:fidel/bottom_nav.dart';
+import 'package:fidel/features/authentication/view/Password_Configurarion/forgot_password.dart';
 import 'package:fidel/features/authentication/view/SignUp/widgets/signup.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/sizes.dart';
@@ -41,17 +42,23 @@ class LoginForm extends StatelessWidget {
               height: Size.spaceBtwInputFields / 2,
             ),
             //rememberme and fogot pasword
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 //SforgotPassword
-                SizedBox(width: 150.0),
-                Text(MTexts.forgotPassword)
+                const SizedBox(width: 150.0),
+
+                TextButton(
+                    onPressed: () {
+                      Get.offAll(const ForgotPasswordScreen());
+                    },
+                    child: Text(
+                      MTexts.forgotPassword,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ))
               ],
             ),
-            const SizedBox(
-              height: Size.spaceBtwSections,
-            ),
+            const SizedBox(height: Size.spaceBtwSections),
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -59,15 +66,14 @@ class LoginForm extends StatelessWidget {
                       Get.offAll(const BottomNavBar());
                     },
                     child: const Text(MTexts.signIn))),
-            const SizedBox(
-              height: 3.0,
-            ),
+            const SizedBox(height: 3.0),
             Row(
               children: [
-                const SizedBox(
-                  width: 40.0,
+                const SizedBox(width: 40.0),
+                Text(
+                  MTexts.donthavaccount,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
-                const Text(MTexts.donthavaccount),
                 TextButton(
                     onPressed: () {
                       Get.offAll(const SignUpScreen());
@@ -83,9 +89,9 @@ class LoginForm extends StatelessWidget {
               children: [
                 const Flexible(
                     child: Divider(
-                  color: MColors.primaryColor,
+                  color: MColors.accent,
                   thickness: 0.5,
-                  indent: 40.0,
+                  indent: 20.0,
                   endIndent: 5,
                 )),
                 Text(
@@ -96,7 +102,7 @@ class LoginForm extends StatelessWidget {
                     child: Divider(
                   color: MColors.accent,
                   thickness: 0.5,
-                  indent: 40.0,
+                  indent: 20.0,
                   endIndent: 5,
                 )),
               ],

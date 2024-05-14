@@ -17,5 +17,10 @@ class MImages {
       'assets/images/onboardingImages/illustration03.png';
 
   static const String cousrseImage = 'assets/carouselSlider/uiux_deco.jpeg';
+
+  // cousre detail image
+  static const String coursebanner = 'assets/images/others/Ads.png';
+  static const String forgetPassIcon =
+      'assets/carouselSlider/forget_pass_icon.png';
 }
 ///home/smart/projects/flutter_projects/fidel/assets/images/onboardingImages/illustration 01.png

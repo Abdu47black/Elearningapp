@@ -1,3 +1,4 @@
+import 'package:fidel/common/widgets/AppBar/app_bar.dart';
 import 'package:fidel/features/authentication/view/SignUp/widgets/OTP/verified_page_success.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/sizes.dart';
@@ -13,18 +14,15 @@ class VerificaionScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: MColors.containerBackground,
-        appBar: AppBar(
-          foregroundColor: MColors.white,
-          toolbarHeight: 100,
-          title: Text(
-            'Verify Phone',
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-          centerTitle: true,
-        ),
         body: SingleChildScrollView(
             child: Column(children: [
-          const SizedBox(height: Size.buttonWidth),
+          const SizedBox(height: Size.lg),
+          MAppBar(
+            showBackArrow: true,
+            title: Text('Verify Phone',
+                style: Theme.of(context).textTheme.headlineMedium),
+          ),
+          const SizedBox(height: Size.buttonWidth - 50),
           Center(
               child: Text(
             MTexts.codeissentto,

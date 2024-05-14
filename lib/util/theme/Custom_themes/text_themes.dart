@@ -37,7 +37,7 @@ class MTextTheme {
     headlineMedium: const TextStyle().copyWith(
         fontSize: 24.0, fontWeight: FontWeight.w600, color: Colors.white),
     headlineSmall: const TextStyle().copyWith(
-        fontSize: 16.0, fontWeight: FontWeight.w400, color: Colors.white),
+        fontSize: 16.0, fontWeight: FontWeight.w300, color: Colors.white),
     titleLarge: const TextStyle().copyWith(
         fontSize: 20.0, fontWeight: FontWeight.w600, color: Colors.white),
     titleMedium: const TextStyle().copyWith(
@@ -47,7 +47,7 @@ class MTextTheme {
     bodyLarge: const TextStyle().copyWith(
         fontSize: 11.0, fontWeight: FontWeight.w600, color: Colors.white),
     bodyMedium: const TextStyle().copyWith(
-        fontSize: 10.0, fontWeight: FontWeight.w600, color: Colors.white),
+        fontSize: 10.0, fontWeight: FontWeight.w300, color: Colors.white),
     bodySmall: const TextStyle().copyWith(
         fontSize: 9.0,
         fontWeight: FontWeight.w600,

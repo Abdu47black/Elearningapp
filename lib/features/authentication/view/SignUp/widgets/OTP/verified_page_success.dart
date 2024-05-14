@@ -19,13 +19,14 @@ class VerifiedPage extends StatelessWidget {
             child: Expanded(
               child: Container(
                 width: 350,
-                height: 550,
+                height: 700,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Column(
                   children: [
-                    const SizedBox(height: Size.buttonWidth),
+                    const SizedBox(height: Size.buttonWidth + 170),
+
                     const Image(
                       image: AssetImage(MImages.verifiedicon),
                       height: Size.buttonWidth,
