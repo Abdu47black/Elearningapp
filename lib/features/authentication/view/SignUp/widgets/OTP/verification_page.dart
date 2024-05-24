@@ -1,5 +1,5 @@
 import 'package:fidel/common/widgets/AppBar/app_bar.dart';
-import 'package:fidel/features/authentication/view/SignUp/widgets/OTP/verified_page_success.dart';
+import 'package:fidel/common/widgets/ReuseableWidgets/success_screen.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/sizes.dart';
 import 'package:fidel/util/constants/text_strings.dart';
@@ -83,7 +83,7 @@ class VerificaionScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {
-                    Get.offAll(const VerifiedPage());
+                    Get.offAll(const SuccessScreen());
                   },
                   child: const Text(MTexts.verifyandcreateaccount)),
             ),

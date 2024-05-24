@@ -1,6 +1,5 @@
 import 'package:fidel/common/widgets/AppBar/app_bar.dart';
-import 'package:fidel/common/widgets/Search%20bar/search_bar.dart';
-import 'package:fidel/features/Course/views/CourseScreen/courses_screen.dart';
+import 'package:fidel/common/widgets/ReuseableWidgets/search_bar.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -50,9 +49,6 @@ class SearchScreen extends StatelessWidget {
                     ],
                   );
                 }),
-          ),
-          const MVerticalListViewBuilder(
-            itemcount: 5,
           ),
         ],
       ),

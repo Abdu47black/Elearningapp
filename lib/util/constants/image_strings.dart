@@ -22,5 +22,13 @@ class MImages {
   static const String coursebanner = 'assets/images/others/Ads.png';
   static const String forgetPassIcon =
       'assets/carouselSlider/forget_pass_icon.png';
+
+  //success Screen
+  static const String success = 'assets/carouselSlider/success.png';
+  static const String reactCourse = 'assets/images/app_splash_logo.png';
+  static const String science = 'assets/storage_files/chemistry.png';
+  static const String profileImage =
+      'assets/images/others/willoy-purple-user-icon.png';
 }
+
 ///home/smart/projects/flutter_projects/fidel/assets/images/onboardingImages/illustration 01.png

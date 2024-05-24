@@ -1,8 +1,8 @@
-import 'package:fidel/features/Course/views/CourseScreen/courses_screen.dart';
+import 'package:fidel/features/Course/views/CourseScreen/course.dart';
 import 'package:fidel/features/Course/views/Search/search_screen.dart';
-import 'package:fidel/features/Course/views/homeScreen/home.dart';
-import 'package:fidel/features/authentication/view/Password_Configurarion/forgot_password.dart';
-import 'package:fidel/features/authentication/view/Password_Configurarion/reset_password.dart';
+import 'package:fidel/features/Course/views/Home/home.dart';
+import 'package:fidel/features/Course/views/WishList/wishlist.dart';
+import 'package:fidel/features/personlization/views/settings/settings.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +15,7 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
-    final dark = Mhelper.isDardMode(context);
+    final dark = Mhelper.isDarkMode(context);
     return Scaffold(
         bottomNavigationBar: Obx(
           () => NavigationBar(
@@ -53,9 +53,9 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    const CourseScreen(),
+    const CoursesScreen(),
     const SearchScreen(),
-    const SearchScreen(),
-    const ForgotPasswordScreen()
+    const WishListScreen(),
+    const SettingsScreen()
   ];
 }

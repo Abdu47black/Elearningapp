@@ -12,7 +12,7 @@ class Pageindicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = Mhelper.isDardMode(context);
+    final dark = Mhelper.isDarkMode(context);
     final controller = OnBoardingController.instance;
     return Positioned(
       top: Mhelper.screenHeight() * 0.8,

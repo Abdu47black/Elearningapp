@@ -38,6 +38,11 @@ dependencies:
   shared_preferences: ^2.2.3
   lottie: ^3.1.0
   fluttertoast: ^8.2.5
+  flutter_svg: ^2.0.10+1
+  readmore: ^3.0.0
+
+  #video Player
+  video_player: ^2.1.1
 
   #fireBase
   firebase_core: ^2.31.0
@@ -59,7 +64,9 @@ flutter:
     - assets/icons/
     - assets/images/onboardingImages/
     - assets/images/others/
+    - assets/images/
     - assets/carouselSlider/
+    - assets/storage_files/
 
   # example:
   fonts:

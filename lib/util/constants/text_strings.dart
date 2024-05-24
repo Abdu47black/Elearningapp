@@ -15,7 +15,7 @@ class MTexts {
   static const homeAppBarTitle = 'Hi, Abdul!';
   static const homeAppBarSubTitle = 'Let\'s Start Learaing';
   static const loginTitle = 'Log In';
-  static const signuptitle = 'Let\'s Start Learaing';
+  static const signuptitle = 'Let\'s Start Learning';
 
   static const firstname = 'First Name';
   static const lastName = 'Last Name';
@@ -25,11 +25,18 @@ class MTexts {
   static const phoneno = 'Phone no';
   static const rememberme = 'Remember me';
   static const resetPasswordemailsent = 'Password Reset Sent';
-  static const forgotPassword = 'Forgot Password?';
+  static const yourAccountSuccessfulyCreatead =
+      'Your Account Successfuly Createad!';
+  static const verifyYourEmailAddress = 'Verify Your Email Address';
+  static const verifyYourEmailAddresssub =
+      'Congratulations Your Account Awaits. verify Your Email to start learning and Experience a world of univaled Deals and Personalized Offers.';
+  static const forgotPassword = 'Forgot Password';
   static const forgotPasswordsubtitle =
       'If you can\'t remember your password, fill in your email below. An email will be sent to you that you can use to reset your password. ';
   static const orSignInWith = 'or SignIn with';
   static const orSignupWith = 'or Signup With';
+  static const successsub =
+      ' Welcome to Your Ultimate Learning Destinataion Your Account is Created';
   static const iagreeto = 'I agree to';
   static const privacypolicy = 'Privacy Policy';
   static const termsofuse = 'Terms of use';
@@ -40,6 +47,8 @@ class MTexts {
   static const codeissentto = 'Code is Sent to 283 253 8989';
   static const resendEmail = 'Resend Email';
   static const signIn = 'Sign In';
+  static const logout = 'Log out';
+
   static const done = 'Done';
   static const signUp = 'Sign Up';
   static const success = 'Success';
@@ -53,11 +62,6 @@ class MTexts {
   static const areadayhaveaccount = 'Already have an account？';
 
   // home texts
-  static const learnedToday = 'Learned today';
-  static const mycourses = 'My Courses';
-  static const learnedmin = "46min /90 min";
-  static const sellingPrice = "624";
-  static const regularPrice = "650";
 
   //verification page
   static const didntrecievecode = 'Didn\'t Recive Code ?';

@@ -49,7 +49,7 @@ class ConWithPhone extends StatelessWidget {
                   ),
                   Text(MTexts.enteryourphone,
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.titleSmall),
+                      style: Theme.of(context).textTheme.headlineSmall),
                   const SizedBox(height: Size.spaceBtwItems),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: Size.md),

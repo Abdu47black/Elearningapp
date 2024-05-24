@@ -1,4 +1,3 @@
-import 'package:fidel/common/widgets/AppBar/app_bar.dart';
 import 'package:fidel/features/authentication/view/Signin/widgets/login.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/image_strings.dart';
@@ -7,10 +6,7 @@ import 'package:fidel/util/constants/text_strings.dart';
 import 'package:fidel/util/devices/device_utility.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:iconsax/iconsax.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});

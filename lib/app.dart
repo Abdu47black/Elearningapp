@@ -12,12 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
+        //themeMode: ThemeMode.dark,
         theme: MAppTheme.lightheme,
         darkTheme: MAppTheme.darktheme,
         home: const Scaffold(
-          backgroundColor: MColors.cremecolor,
+          backgroundColor: MColors.black,
           body: Center(
-            child: CircularProgressIndicator(color: Colors.black87),
+            child: CircularProgressIndicator(color: MColors.white),
           ),
         ));
   }

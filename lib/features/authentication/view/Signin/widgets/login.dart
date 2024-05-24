@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    bool dark = Mhelper.isDardMode(context);
+    bool dark = Mhelper.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(
         padding: Mspacingstyles.paddingWithAppBarHeight,
