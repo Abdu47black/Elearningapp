@@ -1,8 +1,10 @@
+import 'package:fidel/features/authentication/view/Signin/widgets/login.dart';
 import 'package:fidel/util/constants/image_strings.dart';
 import 'package:fidel/util/constants/sizes.dart';
 import 'package:fidel/util/constants/text_strings.dart';
 import 'package:fidel/util/devices/device_utility.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});
@@ -41,7 +43,10 @@ class SuccessScreen extends StatelessWidget {
               SizedBox(
                   width: Size.buttonWidth * 3,
                   child: ElevatedButton(
-                      onPressed: () {}, child: const Text(MTexts.done)))
+                      onPressed: () {
+                        Get.to(const LoginScreen());
+                      },
+                      child: const Text(MTexts.done)))
             ],
           ),
         ),

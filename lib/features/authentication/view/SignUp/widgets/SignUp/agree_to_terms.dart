@@ -1,8 +1,8 @@
+import 'package:fidel/features/authentication/controllers/signup_controller/signup_controller.dart';
 import 'package:fidel/features/authentication/view/Signin/widgets/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:fidel/util/constants/sizes.dart';
 import 'package:fidel/util/constants/text_strings.dart';
 
 class AgreeToTerms extends StatelessWidget {
@@ -12,11 +12,17 @@ class AgreeToTerms extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = SignupController.instance;
     return Column(
       children: [
         Row(
           children: [
-            Checkbox(value: true, onChanged: (value) {}),
+            Obx(() => Checkbox(
+                value: controller.privacypolicy.value,
+                onChanged: (value) {
+                  controller.privacypolicy.value =
+                      !controller.privacypolicy.value;
+                })),
             const Expanded(
               child: Text(
                 MTexts.agreetoterms,
@@ -29,7 +35,7 @@ class AgreeToTerms extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(
-              height: Size.appBarHeight,
+              height: 60,
             ),
             const Text(MTexts.areadayhaveaccount),
             TextButton(

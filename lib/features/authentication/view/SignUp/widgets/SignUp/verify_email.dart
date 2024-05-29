@@ -8,7 +8,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+  const VerifyEmailScreen({super.key, required this.emailadress});
+  final String emailadress;
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +27,6 @@ class VerifyEmailScreen extends StatelessWidget {
           padding: const EdgeInsets.all(18.0),
           child: Column(
             children: [
-              // Image(
-              //     width: MDeviceUtils.getScreenWidth() * 0.6,
-              //     height: MDeviceUtils.getScreenHeight() * 0.3,
-              //     color: MColors.primaryColor,
-              //     image: const AssetImage(MImages.forgetPassIcon)),
               SvgPicture.asset(
                 'assets/icons/email.svg',
                 semanticsLabel: 'My SVG Image',
@@ -50,7 +46,7 @@ class VerifyEmailScreen extends StatelessWidget {
                   const SizedBox(height: Size.spaceBtwSections / 2),
                   Text(
                     textAlign: TextAlign.center,
-                    'Support@fidel@fided.com',
+                    emailadress,
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                   const SizedBox(height: Size.spaceBtwSections / 2),

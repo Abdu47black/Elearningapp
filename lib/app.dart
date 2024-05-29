@@ -1,3 +1,5 @@
+import 'package:fidel/bindings/general_bindings.dart';
+import 'package:fidel/features/authentication/view/Signin/widgets/login.dart';
 import 'package:fidel/util/constants/colors.dart';
 
 import 'package:flutter/material.dart';
@@ -12,9 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        //themeMode: ThemeMode.dark,
+        themeMode: ThemeMode.dark,
         theme: MAppTheme.lightheme,
         darkTheme: MAppTheme.darktheme,
+        // initialBinding: GenralBindings( ),
         home: const Scaffold(
           backgroundColor: MColors.black,
           body: Center(

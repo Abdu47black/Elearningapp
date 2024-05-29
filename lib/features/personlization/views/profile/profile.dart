@@ -46,7 +46,7 @@ class ProfileScreen extends StatelessWidget {
             const MSectionHeading(
                 title: "Profile Information", showActionButton: false),
 
-            MProfileMenu(title: 'Name', value: 'Mohammed R', onPressed: () {}),
+            MProfileMenu(title: 'Name', value: 'Aqmada P', onPressed: () {}),
             MProfileMenu(
                 title: 'Username', value: 'Perbaytes', onPressed: () {}),
             const SizedBox(height: Size.sm),

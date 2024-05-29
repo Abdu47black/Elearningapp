@@ -37,7 +37,7 @@ class SignUpForm extends StatelessWidget {
                 child: TextFormField(
                   controller: controller.lastname,
                   validator: (value) =>
-                      Mvalidator.validateEmptyText('last Name', value),
+                      Mvalidator.validateEmptyText('last name', value),
                   expands: false,
                   decoration: const InputDecoration(labelText: 'Last Name'),
                 ),
@@ -46,9 +46,17 @@ class SignUpForm extends StatelessWidget {
             //email
             const SizedBox(height: Size.spaceBtwInputFields),
             TextFormField(
-                controller: controller.phoneNumber,
+                controller: controller.username,
                 validator: (value) =>
-                    Mvalidator.validateEmptyText('PhoneNumber', value),
+                    Mvalidator.validateEmptyText('username', value),
+                decoration: const InputDecoration(
+                  labelText: 'user name',
+                  hintText: 'username',
+                )),
+            const SizedBox(height: Size.spaceBtwSections),
+            TextFormField(
+                controller: controller.phoneNumber,
+                validator: (value) => Mvalidator.validatePhoneNumber(value),
                 decoration: const InputDecoration(
                   labelText: 'Phone Number',
                   hintText: 'Phone Nubmber',
@@ -57,8 +65,7 @@ class SignUpForm extends StatelessWidget {
 
             TextFormField(
                 controller: controller.email,
-                validator: (value) =>
-                    Mvalidator.validateEmptyText('Email', value),
+                validator: (value) => Mvalidator.validateEmail(value),
                 decoration: const InputDecoration(
                   labelText: 'Your Email',
                   hintText: 'Email',
@@ -66,43 +73,34 @@ class SignUpForm extends StatelessWidget {
 
             const SizedBox(height: Size.spaceBtwInputFields),
             //password   Field
-            SizedBox(
-              width: double.infinity,
-              child: TextFormField(
-                  controller: controller.password,
-                  validator: (value) =>
-                      Mvalidator.validateEmptyText('first Name', value),
-                  decoration: const InputDecoration(
-                    labelText: MTexts.password,
-                    suffixIcon: Icon(Iconsax.eye_slash),
-                    hintText: 'Password',
-                  )),
+            Obx(
+              () => SizedBox(
+                width: double.infinity,
+                child: TextFormField(
+                    controller: controller.password,
+                    obscureText: controller.hidepassword.value,
+                    validator: (value) => Mvalidator.validatePassword(value),
+                    decoration: InputDecoration(
+                      labelText: MTexts.password,
+                      suffixIcon: IconButton(
+                        icon: Icon(controller.hidepassword.value
+                            ? Iconsax.eye_slash
+                            : Iconsax.eye),
+                        onPressed: () => controller.hidepassword.value =
+                            !controller.hidepassword.value,
+                      ),
+                      hintText: 'Password',
+                    )),
+              ),
             ),
-            const SizedBox(height: Size.spaceBtwInputFields / 2),
 
             const SizedBox(height: Size.spaceBtwSections),
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {
-                      Get.offAll(const VerifyEmailScreen());
-                    },
+                    onPressed: () => controller.signup(),
                     child: const Text(MTexts.createAccount))),
-            const SizedBox(height: Size.spaceBtwSections),
-            SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                    style: ButtonStyle(
-                        elevation: WidgetStateProperty.all(0),
-                        backgroundColor: WidgetStateProperty.all<Color>(
-                            MColors.containerBackground)),
-                    onPressed: () {
-                      Get.to(const ConWithPhone());
-                    },
-                    child: Text(
-                      MTexts.continuewithphone,
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ))),
+
             const SizedBox(
               height: 3.0,
             ),
