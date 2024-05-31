@@ -1,8 +1,8 @@
-class associated implements Exception {
+class MFirebaseAuthException implements Exception {
   /// ----the error code assosiated  with the exception
   final String code;
 
-  associated(this.code);
+  MFirebaseAuthException(this.code);
 
   String get message {
     if (code case 'email-already-in-use') {

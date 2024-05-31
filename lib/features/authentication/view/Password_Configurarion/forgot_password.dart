@@ -1,7 +1,9 @@
+import 'package:fidel/features/authentication/controllers/forget_password/forget_password_controller.dart';
 import 'package:fidel/features/authentication/view/Password_Configurarion/reset_password.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/sizes.dart';
 import 'package:fidel/util/constants/text_strings.dart';
+import 'package:fidel/util/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -11,6 +13,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ForgetPasswordController());
     return Scaffold(
         appBar: AppBar(
           leading: const Icon(
@@ -32,11 +35,16 @@ class ForgotPasswordScreen extends StatelessWidget {
               const SizedBox(height: Size.spaceBtwSections / 2),
 
               /// texfField
-              TextFormField(
-                decoration: const InputDecoration(
-                    labelText: MTexts.email,
-                    prefixIcon: Icon(Iconsax.magic_star),
-                    focusColor: MColors.containerBackground),
+              Form(
+                key: controller.forgetPasswordFormKey,
+                child: TextFormField(
+                  controller: controller.email,
+                  validator: Mvalidator.validateEmail,
+                  decoration: const InputDecoration(
+                      labelText: MTexts.email,
+                      prefixIcon: Icon(Iconsax.magic_star),
+                      focusColor: MColors.containerBackground),
+                ),
               ),
 
               /// submit Button
@@ -46,9 +54,7 @@ class ForgotPasswordScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {
-                      Get.to(const ResetPasswordScreen());
-                    },
+                    onPressed: () => controller.sendPasswordResetEmail(),
                     child: const Text(MTexts.forgotPassword)),
               )
             ],

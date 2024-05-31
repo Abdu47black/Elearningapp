@@ -54,7 +54,7 @@ class UserModel {
       'UserName': username,
       'PhoneNumber': phoneNumber,
       'Email': email,
-      'Profilepictures': '',
+      'ProfilePicture': '',
     };
   }
 

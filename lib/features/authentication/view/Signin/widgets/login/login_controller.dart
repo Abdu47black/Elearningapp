@@ -1,5 +1,6 @@
 import 'package:fidel/common/widgets/loader/loaders.dart';
 import 'package:fidel/data/repositories/repositories_authentication/authentication_repository.dart';
+import 'package:fidel/features/personlization/controllers/user_controller.dart';
 import 'package:fidel/util/Popups/full_screen_loader.dart';
 import 'package:fidel/util/constants/image_strings.dart';
 import 'package:fidel/util/helpers/network_manager.dart';
@@ -15,6 +16,7 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   GlobalKey<FormState> LoginFormKey = GlobalKey<FormState>();
+  final userController = Get.put(UserController());
 
   @override
   void onInit() {
@@ -54,5 +56,37 @@ class LoginController extends GetxController {
       MFullScreenLoader.stopLoading();
       MLoaders.errorSnackbar(title: 'oh snap', message: e.toString());
     }
+  }
+}
+
+/// goggle signin Authentication
+Future<void> googleSignIn() async {
+  try {
+    MFullScreenLoader.openLoadingDialog(
+        'Logging you in ', MImages.docerAnimation);
+
+    // check network connectivity
+    final isConnected = await NetworkManager.instance.isConnected();
+    if (!isConnected) {
+      MFullScreenLoader.stopLoading();
+      return;
+    }
+
+    // Google Authentication
+    final userCredentials =
+        await AuthenticationRepository.instance.signInWithGoogle();
+
+    // save user records
+    await userController.saveUserRecord(userCredentials);
+
+    //Remove loader
+    MFullScreenLoader.stopLoading();
+
+    // redirect
+    AuthenticationRepository.instance.screenRedirect();
+  } catch (e) {
+    // remove loader
+    MFullScreenLoader.stopLoading();
+    MLoaders.errorSnackbar(title: 'oh snap', message: e.toString());
   }
 }
