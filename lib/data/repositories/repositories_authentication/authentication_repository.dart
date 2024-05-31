@@ -20,7 +20,7 @@ class AuthenticationRepository extends GetxController {
     screenRedirect();
   }
 
-  screenRedirect() async {
+  void screenRedirect() async {
     final user = _auth.currentUser;
 
     if (user != null) {
@@ -31,17 +31,38 @@ class AuthenticationRepository extends GetxController {
       } else {
         // if users email is not verified them
 
-        Get.offAll(() => const VerifyEmailScreen(
-              emailadress: 'fidel@gmail.com',
-            ));
+        Get.offAll(
+            () => const VerifyEmailScreen(email: _auth.currentUser?.email));
       }
+    } else {
+      deviceStorage.writeIfNull('IsFirstTime', true);
+
+      deviceStorage.read("IsFirstTime") != true
+          ? Get.offAll(() => const LoginScreen())
+          : Get.offAll(const OnboardingScreen());
     }
+  }
 
-    deviceStorage.writeIfNull('IsFirsTime', true);
-
-    deviceStorage.read("IsFirstTime") != true
-        ? Get.offAll(() => const LoginScreen())
-        : Get.offAll(const OnboardingScreen());
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } catch (e) {
+      throw ('Something went wrong. Please try again');
+    }
+    //todo this function was supposed to return exception
+    // } on FirebaseAuthException catch (e) {
+    //   throw MFirebaseAuthException(e.code).message;
+    // } on FirebaseAuthException catch (e) {
+    //   throw MFirebaseException(e.code).message;
+    // } on FormatException catch (_) {
+    //   throw MFormatException();
+    // } on PlatformException catch (e) {
+    //   throw MPlatformException(e.code).message;
+    // } catch (e) {
+    //   throw 'Something went wrong. Please try again';
+    // }
   }
 
   Future<UserCredential> registerWithEmailAndPassword(

@@ -8,7 +8,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key, required this.emailadress});
+  const VerifyEmailScreen(
+      {super.key, required this.emailadress, String? email});
   final String emailadress;
 
   @override
