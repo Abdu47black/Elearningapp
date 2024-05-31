@@ -1,6 +1,7 @@
 import 'package:fidel/common/widgets/AppBar/app_bar.dart';
 import 'package:fidel/common/widgets/Images/circlular_image.dart';
 import 'package:fidel/common/widgets/Texts/section_heading.dart';
+import 'package:fidel/features/personlization/controllers/user_controller.dart';
 import 'package:fidel/features/personlization/views/profile/Widgets/profile_menu.dart';
 import 'package:fidel/util/constants/image_strings.dart';
 import 'package:fidel/util/constants/sizes.dart';
@@ -12,6 +13,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       appBar: MAppBar(
         showBackArrow: true,
@@ -46,9 +48,14 @@ class ProfileScreen extends StatelessWidget {
             const MSectionHeading(
                 title: "Profile Information", showActionButton: false),
 
-            MProfileMenu(title: 'Name', value: 'Aqmada P', onPressed: () {}),
             MProfileMenu(
-                title: 'Username', value: 'Perbaytes', onPressed: () {}),
+                title: 'Name',
+                value: controller.user.value.fullName,
+                onPressed: () {}),
+            MProfileMenu(
+                title: 'Username',
+                value: controller.user.value.username,
+                onPressed: () {}),
             const SizedBox(height: Size.sm),
             const Divider(),
             const SizedBox(height: Size.sm),
@@ -58,15 +65,17 @@ class ProfileScreen extends StatelessWidget {
             const SizedBox(height: Size.sm),
             MProfileMenu(
                 title: 'User ID',
-                value: '45289',
+                value: controller.user.value.id,
                 icon: Iconsax.copy,
                 onPressed: () {}),
             MProfileMenu(
                 title: 'E-mail',
-                value: 'perbaytes@perbaytes.com',
+                value: controller.user.value.email,
                 onPressed: () {}),
             MProfileMenu(
-                title: 'Phone Number', value: '+25166206165', onPressed: () {}),
+                title: 'Phone Number',
+                value: controller.user.value.phoneNumber,
+                onPressed: () {}),
             MProfileMenu(title: 'Gender', value: 'male', onPressed: () {}),
             MProfileMenu(
                 title: 'DateofBirth', value: '10 Oct 2003', onPressed: () {}),

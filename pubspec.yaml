@@ -44,6 +44,7 @@ dependencies:
   flutter_inappwebview_platform_interface: ^1.0.10
   youtube_player_flutter: ^9.0.1
   connectivity_plus: ^6.0.3
+  shimmer: ^3.0.0
 
   #fireBase
   firebase_core: ^2.31.0

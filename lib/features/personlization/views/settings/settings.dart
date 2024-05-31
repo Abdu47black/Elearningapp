@@ -33,7 +33,9 @@ class SettingsScreen extends StatelessWidget {
               const SizedBox(
                 height: Size.spaceBtwSections,
               ),
-              const MProfieAvatar(),
+              // user profile card
+              MProfieAvatar(
+                  onPressed: () => Get.to(() => const ProfileScreen())),
               const SizedBox(
                 height: Size.sm,
               ),
