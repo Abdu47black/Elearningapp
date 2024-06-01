@@ -10,7 +10,7 @@ import 'package:get/get.dart';
 class VerifyEmailScreen extends StatelessWidget {
   const VerifyEmailScreen(
       {super.key, required this.emailadress, String? email});
-  final String emailadress;
+  final String? emailadress;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class VerifyEmailScreen extends StatelessWidget {
                   const SizedBox(height: Size.spaceBtwSections / 2),
                   Text(
                     textAlign: TextAlign.center,
-                    emailadress,
+                    emailadress!,
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                   const SizedBox(height: Size.spaceBtwSections / 2),

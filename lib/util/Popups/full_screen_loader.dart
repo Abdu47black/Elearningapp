@@ -14,10 +14,10 @@ class MFullScreenLoader {
             child: Container(
               color: MColors.containerBackground,
               width: double.infinity,
-              height: 499,
+              height: 399,
               child: Column(
                 children: [
-                  const SizedBox(height: 250),
+                  const SizedBox(height: 200),
                   MAnimationLoaderWidget(text: text, animation: animation)
                 ],
               ),

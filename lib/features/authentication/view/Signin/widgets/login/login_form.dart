@@ -1,7 +1,6 @@
-import 'package:fidel/bottom_nav.dart';
 import 'package:fidel/features/authentication/view/Password_Configurarion/forgot_password.dart';
 import 'package:fidel/features/authentication/view/SignUp/widgets/signup.dart';
-import 'package:fidel/features/authentication/view/Signin/widgets/login/login_controller.dart';
+import 'package:fidel/features/authentication/controllers/login_controller/login_controller.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/sizes.dart';
 import 'package:fidel/util/constants/text_strings.dart';
@@ -20,7 +19,7 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
     return Form(
-      key: controller.LoginFormKey,
+      key: controller.loginFormKey,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: Size.spaceBtwSections),
         child: Column(

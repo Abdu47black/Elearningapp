@@ -1,7 +1,5 @@
 // ignore_for_file: dead_code
 
-import 'dart:html';
-
 import 'package:fidel/bottom_nav.dart';
 import 'package:fidel/features/authentication/view/SignUp/widgets/SignUp/verify_email.dart';
 import 'package:fidel/features/authentication/view/Signin/widgets/login.dart';
@@ -44,7 +42,7 @@ class AuthenticationRepository extends GetxController {
         // if users email is not verified them
 
         Get.offAll(
-            () => const VerifyEmailScreen(email: _auth.currentUser?.email));
+            () => VerifyEmailScreen(emailadress: _auth.currentUser?.email));
       }
     } else {
       deviceStorage.writeIfNull('IsFirstTime', true);
@@ -142,7 +140,7 @@ class AuthenticationRepository extends GetxController {
     } on FirebaseAuthException catch (e) {
       throw MFirebaseAuthException(e.code).message;
     } on FormatException catch (_) {
-      throw MFormatException();
+      throw const MFormatException();
     } on PlatformException catch (e) {
       throw MPlatformException(e.code).message;
     } catch (e) {
@@ -161,7 +159,7 @@ class AuthenticationRepository extends GetxController {
       } on FirebaseException catch (e) {
         throw MFirebaseException(e.code).message;
       } on FormatException catch (_) {
-        throw MFormatException();
+        throw const MFormatException();
       } on PlatformException catch (e) {
         throw MFirebaseException(e.code).message;
       } catch (e) {

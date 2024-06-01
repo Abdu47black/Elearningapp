@@ -1,7 +1,5 @@
 import 'package:fidel/features/authentication/controllers/signup_controller/signup_controller.dart';
-import 'package:fidel/features/authentication/view/SignUp/widgets/OTP/enter_yourphone.dart';
-import 'package:fidel/features/authentication/view/SignUp/widgets/SignUp/verify_email.dart';
-import 'package:fidel/util/constants/colors.dart';
+
 import 'package:fidel/util/constants/sizes.dart';
 import 'package:fidel/util/constants/text_strings.dart';
 import 'package:fidel/util/validators/validation.dart';

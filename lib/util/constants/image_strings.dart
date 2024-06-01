@@ -29,6 +29,8 @@ class MImages {
   static const String science = 'assets/storage_files/chemistry.png';
   static const String profileImage =
       'assets/images/others/willoy-purple-user-icon.png';
+
+  static const String loadinganimations = 'assets/icons/loders.json';
 }
 
 ///home/smart/projects/flutter_projects/fidel/assets/images/onboardingImages/illustration 01.png

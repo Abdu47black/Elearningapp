@@ -1,4 +1,4 @@
-import 'package:fidel/features/authentication/view/Signin/widgets/login/login_controller.dart';
+import 'package:fidel/features/authentication/controllers/login_controller/login_controller.dart';
 import 'package:fidel/util/constants/colors.dart';
 import 'package:fidel/util/constants/image_strings.dart';
 import 'package:fidel/util/constants/sizes.dart';
@@ -14,11 +14,14 @@ class LoginFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
+
+    // static SignupController get instance => Get.find();
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           decoration: BoxDecoration(
+              /*googleSignIn */
               border: Border.all(color: MColors.grey),
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(

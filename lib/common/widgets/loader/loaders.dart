@@ -62,7 +62,7 @@ class MLoaders {
         isDismissible: true,
         shouldIconPulse: true,
         colorText: MColors.white,
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.limeAccent[700],
         snackPosition: SnackPosition.BOTTOM,
         duration: Duration(seconds: duration),
         margin: const EdgeInsets.all(10),

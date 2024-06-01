@@ -21,8 +21,8 @@ class UserRepository extends GetxController {
       throw MFirebaseException(e.code).message;
     } on FormatException catch (_) {
       throw const MFormatException();
-      // } on PlatformException catch (e) {
-      //   throw MPlatformException(e.code).message;
+    } on PlatformException catch (e) {
+      throw MPlatformException(e.code).message;
     } catch (e) {
       throw 'Something went wrong. Please try again';
     }
@@ -52,7 +52,7 @@ class UserRepository extends GetxController {
   }
 
   ///Fucntion to update user detail in firebase
-  Future<void> UpdateUserDetails(UserModel updatedUser) async {
+  Future<void> updateUserDetails(UserModel updatedUser) async {
     try {
       await _db
           .collection("Users")

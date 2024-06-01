@@ -15,13 +15,13 @@ class LoginController extends GetxController {
   final localStorage = GetStorage();
   final email = TextEditingController();
   final password = TextEditingController();
-  GlobalKey<FormState> LoginFormKey = GlobalKey<FormState>();
+  GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
   final userController = Get.put(UserController());
 
   @override
   void onInit() {
-    email.text = localStorage.read('REMEMEBER_ME_EMAIL');
-    password.text = localStorage.read('REMEMEBER_ME_PASSWORD');
+    email.text = localStorage.read('REMEMBER_ME_EMAIL');
+    password.text = localStorage.read('REMEMBER_ME_PASSWORD');
 
     super.onInit();
   }
@@ -31,7 +31,7 @@ class LoginController extends GetxController {
     try {
       // start loading
       MFullScreenLoader.openLoadingDialog(
-          'Logging you in', MImages.docerAnimation);
+          'Logging you in', MImages.loadinganimations);
 
       // Check Internet connection
       final isConnected = await NetworkManager.instance.isConnected();
@@ -57,13 +57,15 @@ class LoginController extends GetxController {
       MLoaders.errorSnackbar(title: 'oh snap', message: e.toString());
     }
   }
+
+  googleSignIn() {}
 }
 
 /// goggle signin Authentication
 Future<void> googleSignIn() async {
   try {
     MFullScreenLoader.openLoadingDialog(
-        'Logging you in ', MImages.docerAnimation);
+        'Logging you in ', MImages.loadinganimations);
 
     // check network connectivity
     final isConnected = await NetworkManager.instance.isConnected();
@@ -77,7 +79,7 @@ Future<void> googleSignIn() async {
         await AuthenticationRepository.instance.signInWithGoogle();
 
     // save user records
-    await userController.saveUserRecord(userCredentials);
+    // await UserController.saveUserRecord(userCredentials);
 
     //Remove loader
     MFullScreenLoader.stopLoading();

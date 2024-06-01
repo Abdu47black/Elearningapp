@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.dark,
         theme: MAppTheme.lightheme,
         darkTheme: MAppTheme.darktheme,
-        // initialBinding: GenralBindings( ),
+        //initialBinding: GenralBindings(),
         home: const Scaffold(
           backgroundColor: MColors.black,
           body: Center(
